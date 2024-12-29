@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    overflow-x: hidden; 
+    background-color: #f4f4f4;
+}
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.center {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+input[type="text"],
+input[type="password"] {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+h2 {
+    text-align: center;
+}
+.button,
+.sign-in {
+    color: white;
+    font-size: large;
+    background-color: rgb(0, 193, 55);
+    border-radius: 5px;
+    padding: 10px;
+    border: transparent;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.checkbox {
+    margin-left: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+.icon {
+    width: 20px;
+    align-items: center;
+    height: 20px;
+    margin-right: 5px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.login{
+    width: 100%;
+    height:auto;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+    td {
+        display: block;
+        width: 100%;
+    }
+    img {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+}

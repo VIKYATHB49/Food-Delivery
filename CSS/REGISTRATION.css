@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+form {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+h2 {
+    text-align: center;
+}
+.button {
+    color: white;
+    font-size: large;
+    background-color: rgb(0, 193, 55);
+    border-radius: 5px;
+    padding: 10px;
+    border: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td {
+    padding: 20px;
+    vertical-align: middle;
+}
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+@media screen and (max-width: 700px) {
+    td {
+        display: block;
+        width: 100%;
+    }
+    img {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+}
+.form-container {
+    margin: auto;
+    max-height: 90vh; 
+    width: auto; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box; 
+}
+
+        .form-container .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .form-container .input-group {
+            flex: 1;
+            min-width: calc(50% - 16px); 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-container textarea {
+            resize: none;
+            height: 60px;
+        }
+
+        .form-container .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .form-container .btn:hover {
+            background-color: #0056b3;
+        }
+        .form-container .input-group div {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.form-container .input-group div label {
+    margin: 0;
+    display: flex; 
+}
+
+.form-container input[type="radio"] {
+    margin: 5px;
+    vertical-align: middle;
+}
+        @media (max-width: 768px) {
+            
+
+            .form-container .input-group {
+                min-width: 100%;
+            }
+
+            .form-container input,
+            .form-container textarea,
+            .form-container select {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            
+
+            .form-container .btn {
+                font-size: 14px;
+            }
+        }
+        .radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        .address-item {
+    display: flex;
+    align-items: flex-start;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    justify-content: center; 
+}
+
+.radio-button input[type="radio"] {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.address-details {
+    flex-grow: 1;
+}
+
+.address-type {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.alt-phone {
+    margin-left: 10px;
+}
+
+label {
+    display: block;
+}
+#Required{
+    color: #ff4d4d;
+}

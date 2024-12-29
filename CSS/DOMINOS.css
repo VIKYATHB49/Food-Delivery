@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    width: 16rem;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+.info {
+    font-size: 1rem;
+}
+.dropdown{
+    margin-top: 5px;
+}
+.d-flex {
+    display: flex;
+    margin-top: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.value {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: none;
+}
+.add-to-cart {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#alert {
+    width: 35%;
+    position:fixed;
+    text-align: left;
+    right:0;
+    z-index: 1;
+    padding: 10px;
+    color: white;
+    animation: slideFromRight 0.8s forwards;
+  
+  }
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}

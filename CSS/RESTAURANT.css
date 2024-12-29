@@ -1,0 +1,126 @@
+
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}.hero-section {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero-section p {
+    font-size: 1.2rem;
+}
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+.restaurant-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 22%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.restaurant-card img {
+    width: 70%;
+    align-self: center;
+    height: 150px;
+}
+.restaurant-details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.restaurant-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.restaurant-category {
+    color: #757575;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.restaurant-rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+.view-menu-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 25px;
+    background-color:rgb(48, 93, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+    height: fit-content;
+}
+.last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.last ul {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 992px) {
+    .restaurant-card {
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 768px) {
+    .restaurant-card {
+        width: calc(100% - 20px); 
+    }
+}
+@media screen and (max-width: 700px) {
+    .last ul {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .last {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 400px) {
+    .restaurant-card {
+        width: 90%;
+    }
+}
+.view-menu-btn:hover {
+    background-color: #000000;
+    text-decoration: none;
+    color: #f7f7f7;
+}

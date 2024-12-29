@@ -1,0 +1,251 @@
+body {
+    background-color: #f4f4f4;
+}
+.profile-container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: 30px;
+}
+.edit-btn {
+    margin-top: 10px;  
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
+.edit-btn:hover {
+    background-color: darkblue;
+}
+.account-section {
+    margin-top: 40px;
+}
+.account-section h4 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-switch input {
+    width: 50px;
+}
+input[type="checkbox"] {
+width: 25px;
+height: 25px;
+appearance: none;
+border: 2px solid #ccc; 
+border-radius: 5px; 
+background-color: white; 
+cursor: pointer;
+position: relative;
+transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:checked {
+background-color: #4CAF50; 
+border-color: #4CAF50; 
+}
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.dropdown h5 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    flex: 1; 
+}
+.dropdown-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: right;
+}
+.dropdown-button:hover {
+    text-decoration: underline;
+}
+.dropdown-content {
+    display: none;
+    padding: 10px; 
+    background-color: #f9f9f9; 
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: rgb(180, 0, 0);
+    display: block;
+}
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+.show {
+    display: block;
+}
+.logout-section {
+    text-align: center;
+    margin-top: 40px; 
+}
+.logout-section .edit-btn {
+    margin: 0 auto;
+    display: inline-block;
+}
+.profile-header img{
+    width: 120px;
+    height: 120px;
+}
+.dropdown img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+    height: fit-content;
+}
+.last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.last ul {
+    display: flex;
+    gap: 20px;
+}
+@media screen and (max-width: 700px) {
+    .last ul {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .last {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 400px) {
+    .restaurant-card {
+        width: 90%;
+    }
+}
+.footer {
+    width: 100%;
+    padding: 10px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .top-left {
+    font-size: 70px;
+    font-weight: 600;
+    color: #a5a5a5;
+    font-family:cursive;
+  }
+  
+  .center {
+    font-size: 200px;
+    font-weight: 600;
+    margin-top: 50px;
+    color: #4f4f4f;
+    
+  }
+  
+  .bottom-right {
+    font-size: 70px;
+    font-weight: 600;
+    color: #a5a5a5;
+    margin-top: 150px;
+    font-family:cursive;
+  }
+  
+  @media (max-width: 1200px) {
+    .top-left, .bottom-right {
+      font-size: 60px;
+      font-weight: 500;
+    }
+  
+    .center {
+      font-size: 180px;
+      font-weight: 500;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .top-left, .bottom-right {
+      font-size: 50px;
+      font-weight: 400;
+    }
+  
+    .center {
+      font-size: 150px;
+      font-weight: 500;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .top-left, .bottom-right {
+      font-size: 40px;
+      font-weight: 400;
+    }
+  
+    .center {
+      font-size: 120px;
+      font-weight: 400;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer {
+      flex-direction: column; 
+      height: auto; 
+    }
+  
+    .top-left {
+      margin-bottom: 20px;
+      font-size: 35px;
+      font-weight: 300;
+    }
+  
+    .center {
+      font-size: 100px;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  
+    .bottom-right {
+      margin-top: 0;
+      font-size: 35px;
+      font-weight: 300;
+    }
+  }
