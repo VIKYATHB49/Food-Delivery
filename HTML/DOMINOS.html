@@ -1,0 +1,182 @@
+<html>
+    <head>
+<link rel="stylesheet"  type="text/css" href="../CSS/DOMINOS.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="../IMAGES/LOGO.png" width="150" height="40" alt="">
+            </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="HOME.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="RESTAURANT.html">Restaurant</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ABOUT.html">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="CART.jsp">Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="PROFILE.jsp">Profile</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search Restaurant" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+            </nav>
+
+  <div class="alert" id="alert" style="display: none;">
+</div>
+    <div class="container">
+        <div class="card">
+            <img src="../IMAGES/breverages.jpg" class="img" alt="breverages">
+            <select class="dropdown" id="breverages-type" onchange="updatePrice('breverages')">
+                <option value="0">Select</option>
+                <option value="30">Coke</option>
+                <option value="180">Mojito Classic</option>
+                <option value="30">Water</option>
+            </select>
+
+            <div class="d-flex">
+                <div class="info"><b>Breverages</b><br><span id="breverages-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="breverages-decrement">-</button>
+                    <input type="text" id="breverages-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="breverages-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="breverages()">Add To Cart</button>
+        </div>
+
+
+        <div class="card">
+            <img src="../IMAGES/pizza-mania.jpg" class="img" alt="pizza-mania">
+            <select class="dropdown" id="pizza-mania-type" onchange="updatePrice('pizza-mania')">
+                <option value="0">Select</option>
+                <option value="120">Veg Loaded pizza</option>
+                <option value="100">Cheesy Classic pizza</option>
+                <option value="120">Paneer pizza</option>
+                <option value="90">Onion pizza</option>
+                <option value="90">Capsicum pizza</option>
+                <option value="90">Corn pizza</option>
+            </select>
+
+            <div class="d-flex">
+                <div class="info"><b>pizza-mania</b><br><span id="pizza-mania-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="pizza-mania-decrement">-</button>
+                    <input type="text" id="pizza-mania-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="pizza-mania-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart"  onclick="pizza_mania()">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="../IMAGES/pasta.jpg" class="img" alt="pasta">
+            <select class="dropdown" id="pasta-type" onchange="updatePrice('pasta')">
+                <option value="0">Select</option>
+                <option value="150">Moroccan         </option>
+                <option value="180">Tikka Masala   </option>
+                <option value="160">Creamy Tomato            </option>
+            </select>
+
+            <div class="d-flex">
+                <div class="info"><b>Pasta</b><br><span id="pasta-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="pasta-decrement">-</button>
+                    <input type="text" id="pasta-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="pasta-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="pasta()">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="../IMAGES/Burger.jpg" class="img" alt="Burger">
+            <select class="dropdown" id="Burger-type" onchange="updatePrice('Burger')">
+                <option value="0">Select</option>
+                <option value="130">Classic VEG</option>
+                <option value="180">Premium VEG</option>
+                <option value="220">Classic NON VEG</option>
+            </select>
+
+            <div class="d-flex">
+                <div class="info"><b>Burger</b><br><span id="Burger-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="Burger-decrement">-</button>
+                    <input type="text" id="Burger-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="Burger-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart"onclick="burger()">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="../IMAGES/pizza.jpg" class="img" alt="pizza">
+            <select class="dropdown" id="pizza-type" onchange="updatePrice('pizza')">
+                <option value="0">Select</option>
+                <option value="200">Spiced-Double-Chicken</option>
+                <option value="220">Chicken Maximus</option>
+                <option value="300">Indo Fusion Chicken</option>
+            </select>
+        
+            <div class="d-flex">
+                <div class="info"><b>Pizza</b><br><span id="pizza-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="pizza-decrement">-</button>
+                    <input type="text" id="pizza-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="pizza-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="pizza()">Add To Cart</button> 
+        </div>
+        
+
+        <div class="card">
+            <img src="../IMAGES/Toppings.jpg" class="img" alt="Toppings">
+            <select class="dropdown" id="Toppings-type" onchange="updatePrice('Toppings')">
+                <option value="0">Select</option>
+                <option value="30">Onion</option>
+                <option value="50">Extra Cheese</option>
+                <option value="40">Capsicum</option>
+            </select>
+
+            <div class="d-flex">
+                <div class="info"><b>Toppings</b><br><span id="Toppings-price"></span> Rs</div>
+                <div class="d-flex">
+                    <button class="btn" id="Toppings-decrement">-</button>
+                    <input type="text" id="Toppings-quantity" class="value" value="0" readonly>
+                    <button class="btn" id="Toppings-increment">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart"  onclick="Toppings()">Add To Cart</button>
+        </div>
+    </div>
+  <script src="../JS/DOMINOS.js"></script>
+  <script src="../JS/CART.js"></script>
+
+</body>
+</html>
+
+
+
+
+

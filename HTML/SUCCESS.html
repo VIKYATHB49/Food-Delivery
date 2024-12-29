@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .success {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .Orders {
+            padding: 12px 20px;
+            background-color: rgb(0, 97, 200);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 2vw;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            width: 20vw;
+            max-width: 200px;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+        }
+
+        .Orders:hover {
+            background-color: rgb(0, 77, 160);
+        }
+
+        dotlottie-player {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            aspect-ratio: 16/9;
+        }
+
+        @media (max-width: 576px) {
+            .success {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .Orders {
+                width: auto;
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+
+            dotlottie-player {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                aspect-ratio: 16/9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player 
+            src="https://lottie.host/30382154-1881-4e16-ac53-c2db3495eb58/UlBRoKYiLA.lottie" 
+            background="transparent" 
+            speed="1" 
+            loop 
+            autoplay>
+        </dotlottie-player>
+        <a href="HOME.html">
+            <button class="Orders" id="viewOrdersBtn">View Orders</button>
+        </a>
+    </div>
+
+    <script>
+      
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('viewOrdersBtn').style.opacity = 1; 
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

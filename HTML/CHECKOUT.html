@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../CSS/CHECKOUT.css">
+</head>
+<body>
+
+<div class="main-container">
+  <div class="bank-offers">
+    <h3>Bank Offers</h3>
+    <ol>
+      <li>Get 5% off on Axis Bank credit card on all Products</li>
+      <li>Flat 3000 Rs cashback on HDFC Bank Debit Card payments</li>
+      <li>Exclusive 10% off on your first payment via UPI_ID.</li>
+    </ol>
+    <div class="cart-summary-container">
+      <h3 class="summary-title">Cart Summary</h3>
+      <div class="summary-header d-flex justify-content-between align-items-center">
+          <span class="total-amount">Total: Rs. <span id="amount-to-pay" style="color: blue;">0.00</span></span>
+          
+      </div>
+      
+      
+  </div>
+  <script>
+    window.onload = function () {
+    const storedAmount = localStorage.getItem('currentAmount');
+    if (storedAmount) {
+        document.getElementById('amount-to-pay').textContent = storedAmount;
+    }
+  };
+    document.getElementById('toggle-summary-details').addEventListener('click', function() {
+        const details = document.getElementById('summary-details');
+        details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+</div>
+
+<div class="payment-options">
+  <h2>Select Payment Method</h2>
+  <div class="payment-methods">
+    <div class="payment-method" onclick="openPopup('card-form')">
+      <img src="../IMAGES/credit-card.png" alt="Credit Card">
+      <p>Credit/Debit Card</p>
+    </div>
+    <div class="payment-method" onclick="openPopup('upi-form')">
+      <img src="../IMAGES/UPI.png" alt="UPI">
+      <p>UPI</p>
+    </div>
+    <div class="payment-method" onclick="openPopup('cod-form')">
+      <img src="../IMAGES/cash-on-delivery.png" alt="Cash on Delivery">
+      <p>Cash on Delivery</p>
+    </div>
+    <div class="payment-method" onclick="openPopup('wallet-form')">
+      <img src="../IMAGES/wallet.png" alt="Wallet">
+      <p>Wallet</p>
+    </div>
+  </div>
+  <div class="secure-payment">
+    <p><img src="../IMAGES/lock.png" alt="Secure Payment"><b>Your payment is secured with SHA encryption.</b></p>
+</div>
+</div>
+
+<div class="popup-background" id="popup-background">
+  <div class="popup-form" id="form-popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h3>Payment Form</h3>
+    <div id="popup-content">
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+    function openPopup(formId) {
+      const popupContent = document.getElementById('popup-content');
+      popupContent.innerHTML = '';
+  
+      if (formId === 'card-form') {
+        popupContent.innerHTML = `
+          <input type="text" id="card-number" placeholder="Card Number" required>
+          <input type="date" id="expiry-date" placeholder="Expiry Date" required>
+          <input type="text" id="cvv" placeholder="CVV" required>
+          <button onclick="validateForm(['card-number', 'expiry-date', 'cvv'])">Pay</button>
+        `;
+      } else if (formId === 'upi-form') {
+        popupContent.innerHTML = `
+          <input type="text" id="upi-id" placeholder="UPI ID" required>
+          <button onclick="validateForm(['upi-id'])">Pay</button>
+        `;
+      } else if (formId === 'cod-form') {
+        popupContent.innerHTML = `
+          <p>No further details required. Pay when your order arrives.</p>
+          <button onclick="navigateToSuccess()">Confirm Order</button>
+        `;
+      } else if (formId === 'wallet-form') {
+        popupContent.innerHTML = `
+          <input type="text" id="wallet-number" placeholder="Wallet Number" required>
+          <button onclick="validateForm(['wallet-number'])">Pay</button>
+        `;
+      }
+  
+      document.getElementById('popup-background').style.display = 'block';
+    }
+  
+    function validateForm(fields) {
+      let valid = true;
+      fields.forEach(field => {
+        const input = document.getElementById(field);
+        if (!input.value.trim()) {
+          valid = false;
+          input.style.borderColor = 'red';
+        } else {
+          input.style.borderColor = '#ddd';
+        }
+      });
+      if (valid) {
+        navigateToSuccess();
+      }
+    }
+  
+    function navigateToSuccess() {
+      window.location.href = "SUCCESS.html";
+    }
+  
+    function closePopup() {
+      document.getElementById('popup-background').style.display = 'none';
+    }
+  </script>
+
+<script src="../JS/CART.js"></script>
+
+</body>
+</html>
