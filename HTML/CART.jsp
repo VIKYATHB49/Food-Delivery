@@ -453,7 +453,7 @@ button.submit-btn:hover {
         }
 
     </script>
-     <script src="../JS/CART.js"></script>
+     <script src="../JS/CART.js?ver=1.0"></script>
     <script src="../JS/DOMINOS2.js"></script>
 </body>
 </html>
