@@ -373,25 +373,7 @@ button.submit-btn:hover {
                 </div>
               </td>
             </tr>
-          </table>
-
-    </div>
-
-
-    
-
-
-
-          
-
-
-
-
-
-    
-      
-        
-        
+          </table>       
     <div class="cart-summary-container">
         <h3 class="summary-title">Cart Summary</h3>
         <div class="summary-header d-flex justify-content-between align-items-center">
@@ -433,6 +415,7 @@ button.submit-btn:hover {
             <button id="delete-selected-button" class="btn btn-danger btn-lg">Delete Selected Items</button>
         </div>
     </div>
+</div>
     
     <script>
         document.getElementById('toggle-summary-details').addEventListener('click', function() {
