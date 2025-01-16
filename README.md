@@ -56,6 +56,15 @@ Open your browser and navigate to:
 ```bash
  http://localhost:8080/HTML/HOME2.html
 ```
+
+
+## Demo Video
+[Click here to watch the demo video](https://vikyathb49.github.io/Food-Delivery/Demo.mp4)
+
+
+
+
+
 ## Accessing the MySQL Database
 You can interact with the MySQL database either from inside the container or through an external GUI client.
 ### Option 1: Access from Inside the Container
